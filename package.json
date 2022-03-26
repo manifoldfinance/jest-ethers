@@ -1,14 +1,14 @@
 {
-  "name": "jest-eth",
+  "name": "@contractshark/jest-env",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Web3 Ganache Jest Enviornment",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "sam bacha",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "dependencies": {
     "@ganache/cli": "^0.1.4",
     "@ganache/core": "^0.1.4",
