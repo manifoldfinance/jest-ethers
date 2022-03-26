@@ -8,22 +8,18 @@
 yarn add -D @contractshark/jest-env
 ```
 
-### Jest Configuration
-
-```jsonc
-{
-  "testEnvironment": "ethers",
-  "testEnvironmentOptions": {
-
-  }
-}
-```
 
 ## Ganache Provider Interface
 
 
 ```typescript
- export interface IProviderOptions {
+/**
+* IEthereumOptions
+* @export
+* @class EthersJestEnvironment
+* @extends {NodeEnvironment}
+*/
+export interface IEthereumOptions {
       account_keys_path?: string;
       accounts?: object[];
       allowUnlimitedContractSize?: boolean;
@@ -36,24 +32,23 @@ yarn add -D @contractshark/jest-env
       forkCacheSize?: number;
       gasLimit?: string | number;
       gasPrice?: string;
-      hardfork?: "byzantium" | "constantinople" | "petersburg" | "istanbul" | "muirGlacier";
+      hardfork?: "[]";
       hd_path?: string;
       locked?: boolean;
-      logger?: {
-        log(msg: string): void;
-      };
-      mnemonic?: string;
-      network_id?: number;
-      networkId?: number;
-      port?: number;
-      seed?: any;
-      time?: Date;
-      total_accounts?: number;
-      unlocked_accounts?: string[];
-      verbose?: boolean;
-      vmErrorsOnRPCResponse?: boolean;
-      ws?: boolean;
+          logger?: {
+            log(msg: string): void,
+          };
+    networkId?: number;
+    port?: number;
+    seed?: any;
+    time?: Date;
+    total_accounts?: number;
+    unlocked_accounts?: string[];
+    verbose?: boolean;
+    vmErrorsOnRPCResponse?: boolean;
+    ws?: boolean;
 }
+
 ```
 
 ## Ethers
